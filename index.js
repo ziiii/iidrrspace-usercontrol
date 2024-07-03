@@ -419,68 +419,68 @@ if(camera.position.z<551){
 animate();
 
 
-//TIMELINE animation 一个完了再另一个
-//  window.addEventListener('mousedown', function () {
+// //TIMELINE animation 一个完了再另一个
+// //  window.addEventListener('mousedown', function () {
 
-  function playTimeline(){
+//   function playTimeline(){
 
-    const tl = gsap.timeline({
-        onComplete: function() {
-                scene.add(logoModel);
-                logoModel.position.set(85,-110, 1000);
-                fadeIn(logoModel);
+//     const tl = gsap.timeline({
+//         onComplete: function() {
+//                 scene.add(logoModel);
+//                 logoModel.position.set(85,-110, 1000);
+//                 fadeIn(logoModel);
 
-                const topLight2 = new THREE.SpotLight(0xffffff, 0.5, 200, 0.5); // (color, intensity)
-                topLight2.position.set(85,-130, 1100);
-                topLight2.castShadow = true;
-                scene.add(topLight2);
-                //const spotLightHelper3 = new THREE.SpotLightHelper(topLight2);
-                //scene.add( spotLightHelper3);
-            }
-    });
+//                 const topLight2 = new THREE.SpotLight(0xffffff, 0.5, 200, 0.5); // (color, intensity)
+//                 topLight2.position.set(85,-130, 1100);
+//                 topLight2.castShadow = true;
+//                 scene.add(topLight2);
+//                 //const spotLightHelper3 = new THREE.SpotLightHelper(topLight2);
+//                 //scene.add( spotLightHelper3);
+//             }
+//     });
 
-    tl.to(camera.position, {      //MOVE IN from gate
-        z: cameraPosZ-900,
-        duration: 4.5
-    })
+//     tl.to(camera.position, {      //MOVE IN from gate
+//         z: cameraPosZ-900,
+//         duration: 4.5
+//     })
 
-    .to(camera.rotation, {
-        y: 0.9,                // turn left
-        duration: 2.5
-    })
+//     .to(camera.rotation, {
+//         y: 0.9,                // turn left
+//         duration: 2.5
+//     })
 
-    .to(camera.rotation, {
-        y: 0,                  
-        duration: 3
-    })
-    .to(camera.position, {
-        z: cameraPosZ-800,
-        duration: 3
-    }, "<")     // Turn right and step back
+//     .to(camera.rotation, {
+//         y: 0,                  
+//         duration: 3
+//     })
+//     .to(camera.position, {
+//         z: cameraPosZ-800,
+//         duration: 3
+//     }, "<")     // Turn right and step back
    
 
-    .to(camera.position, {
-        z: cameraPosZ-1000,  
-        x:120,
-        y:-60,
-        duration: 2.5
-    })                         //MOVE forward a little
+//     .to(camera.position, {
+//         z: cameraPosZ-1000,  
+//         x:120,
+//         y:-60,
+//         duration: 2.5
+//     })                         //MOVE forward a little
  
 
-    .to(camera.position, {
-        z: cameraPosZ-1400,     //MOVE in corridor
-        y:-90,
-        duration: 3
-    })
-    .to({}, { duration: 2 })    //pause
+//     .to(camera.position, {
+//         z: cameraPosZ-1400,     //MOVE in corridor
+//         y:-90,
+//         duration: 3
+//     })
+//     .to({}, { duration: 2 })    //pause
      
 
-    .to(camera.position, {      //leave the corridor
-        z: cameraPosZ-300,  
-        x:100,
-        duration: 6
-    })
+//     .to(camera.position, {      //leave the corridor
+//         z: cameraPosZ-300,  
+//         x:100,
+//         duration: 6
+//     })
 
 
-;
-  }
+// ;
+//   }
