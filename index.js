@@ -136,7 +136,8 @@ void main() {
 //let gui = new GUI();
 
 const modelPosZ=600;
-const cameraPosZ=modelPosZ+850; //850
+//const cameraPosZ=modelPosZ+850; 
+const cameraPosZ=modelPosZ+1450; 
 const planePosZ=modelPosZ-380;  //20
 const magicPosZ=modelPosZ+100; 
 let logoDisappear=false;
