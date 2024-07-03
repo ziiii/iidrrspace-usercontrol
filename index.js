@@ -326,8 +326,8 @@ meshLightB.visible=false;
 
 //Orbitcontrols
 const controls = new OrbitControls( camera, renderer.domElement );
-//camera.position.set(40,-40, 850 );
-//controls.update();
+camera.position.set(40,-40, 850 );
+controls.update();
 
 
 //fade out logo
@@ -350,7 +350,7 @@ function fadeOut(object) {
         } else {
             scene.remove(object);
             topLight.visible=false;
-           playTimeline();   //after the fading out is done, start animation
+           //playTimeline();   //after the fading out is done, start animation
         }
     }
     deOpacity();
@@ -395,7 +395,7 @@ function updateVisibility() { //When models are both loaded
 //ANIMATE
 function animate() {
     requestAnimationFrame(animate);
-    //controls.update();
+    controls.update();
 console.log(camera.position.z);
 
 if(logoModel){
