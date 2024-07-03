@@ -326,7 +326,7 @@ meshLightB.visible=false;
 
 //Orbitcontrols
 const controls = new OrbitControls( camera, renderer.domElement );
-camera.position.set(40,-40, 850 );
+//camera.position.set(40,-40, 850 );
 controls.update();
 
 
